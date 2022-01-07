@@ -13,12 +13,12 @@ class _DataListState extends State<DataList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('List Data Penduduk'),
+        title: const Text('List Data Penduduk'),
         elevation: 0,
       ),
       body: ListView(
-        padding: EdgeInsets.all(40),
-        children: [
+        padding: const EdgeInsets.all(40),
+        children: const [
           LabelDataList(
             nama: 'Daniel',
             tahun: '8 Tahun',
@@ -43,12 +43,12 @@ class _DataListState extends State<DataList> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => InputNewData(),
+              builder: (context) => const InputNewData(),
             ),
           );
         },
-        backgroundColor: Color(0xFF227471),
-        child: Icon(Icons.add),
+        backgroundColor: const Color(0xFF227471),
+        child: const Icon(Icons.add),
       ),
     );
   }
@@ -71,12 +71,12 @@ class LabelDataList extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Container(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             border: Border.all(
-              color: Color(0xFF227471),
+              color: const Color(0xFF227471),
             ),
-            color: Color(0xFF217777),
+            color: const Color(0xFF217777),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Column(
@@ -84,31 +84,32 @@ class LabelDataList extends StatelessWidget {
             children: [
               Text(
                 nama,
-                style: TextStyle(fontSize: 25, color: Colors.white),
+                style: const TextStyle(fontSize: 25, color: Colors.white),
               ),
-              SizedBox(height: 10),
-              Divider(thickness: 1, height: 0, color: Colors.black),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
+              const Divider(thickness: 1, height: 0, color: Colors.black),
+              const SizedBox(height: 10),
               Text(
                 tahun,
-                style: TextStyle(fontSize: 20, color: Colors.white),
+                style: const TextStyle(fontSize: 20, color: Colors.white),
               ),
             ],
           ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Container(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Text(
             pekerjaan,
-            style: TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.white),
           ),
           decoration: BoxDecoration(
-              border: Border.all(
-                color: Color(0xFF227471),
-              ),
-              borderRadius: BorderRadius.circular(30),
-              color: Color(0xFF217777)),
+            border: Border.all(
+              color: const Color(0xFF227471),
+            ),
+            borderRadius: BorderRadius.circular(30),
+            color: const Color(0xFF217777),
+          ),
         )
       ],
     );

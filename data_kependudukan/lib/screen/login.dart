@@ -1,5 +1,4 @@
 import 'package:data_kependudukan/screen/data_list.dart';
-import 'package:data_kependudukan/screen/input_new_data.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -22,11 +21,11 @@ class _LoginState extends State<Login> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => DataList(),
+              builder: (context) => const DataList(),
             ),
           );
         } else {
-          SnackBar snackBar = SnackBar(
+          SnackBar snackBar = const SnackBar(
             content: Text('Nama atau NIK salah'),
           );
           ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -70,7 +69,8 @@ class _LoginState extends State<Login> {
                 onPressed: onLogin,
                 child: const Text('Login'),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Color(0xFF227471)),
+                  backgroundColor:
+                      MaterialStateProperty.all(const Color(0xFF227471)),
                   shape: MaterialStateProperty.all(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
@@ -102,18 +102,18 @@ class LabelTextField extends StatelessWidget {
       children: [
         Text(
           labelTextField,
-          style: TextStyle(
+          style: const TextStyle(
             color: Color(0xFF227471),
             fontSize: 25,
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         TextFormField(
           controller: textEdit,
           decoration: InputDecoration(
             hintText: labelTextField,
-            hintStyle: TextStyle(color: Color(0XFF227471)),
+            hintStyle: const TextStyle(color: Color(0XFF227471)),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30),
             ),
@@ -123,7 +123,7 @@ class LabelTextField extends StatelessWidget {
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide(color: Color(0xFF227471)),
+              borderSide: const BorderSide(color: Color(0xFF227471)),
             ),
           ),
         )

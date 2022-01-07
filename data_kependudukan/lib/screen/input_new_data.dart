@@ -150,9 +150,9 @@ class _InputNewDataState extends State<InputNewData> {
               child: Row(
                 children: [
                   LabelRowColumn(labelRowColumn: 'Nomor', textRow: nomor),
-                  SizedBox(width: 13),
+                  const SizedBox(width: 13),
                   LabelRowColumn(labelRowColumn: 'RT', textRow: rt),
-                  SizedBox(width: 13),
+                  const SizedBox(width: 13),
                   LabelRowColumn(labelRowColumn: 'RW', textRow: rw),
                 ],
               ),
@@ -207,7 +207,7 @@ class _InputNewDataState extends State<InputNewData> {
                         width: 100,
                         child: TextField(
                           controller: lamaTinggal,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: 'Lama Tinggal',
                             hintStyle: TextStyle(
                               color: Color(0xFF84ACAC),
@@ -332,7 +332,9 @@ class LabelRowColumn extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 15),
           child: Text(
             labelRowColumn,
-            style: const TextStyle(color: Color(0XFF227471)),
+            style: const TextStyle(
+              color: Color(0XFF227471),
+            ),
           ),
         ),
         SizedBox(

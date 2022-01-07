@@ -1,5 +1,4 @@
 import 'package:data_kependudukan/model/input_data_model.dart';
-import 'package:data_kependudukan/screen/input_new_data.dart';
 import 'package:flutter/material.dart';
 
 class DataDiri extends StatefulWidget {
@@ -16,7 +15,7 @@ class _DataDiriState extends State<DataDiri> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Data Diri',
           style: TextStyle(fontSize: 20),
         ),
@@ -25,8 +24,8 @@ class _DataDiriState extends State<DataDiri> {
         padding: const EdgeInsets.all(30),
         child: Column(
           children: [
-            LabelText(labelCategory: 'Personal'),
-            Divider(thickness: 2, height: 0, color: Colors.black),
+            const LabelText(labelCategory: 'Personal'),
+            const Divider(thickness: 2, height: 0, color: Colors.black),
             LabelTextField(
               labelForm: 'Nama Lengkap',
               labelForm2: widget.inputDataModel.namaLengkap!,
@@ -47,8 +46,8 @@ class _DataDiriState extends State<DataDiri> {
               labelForm: 'Agama',
               labelForm2: widget.inputDataModel.agama!,
             ),
-            LabelText(labelCategory: 'Kelahiran'),
-            Divider(thickness: 2, height: 0, color: Colors.black),
+            const LabelText(labelCategory: 'Kelahiran'),
+            const Divider(thickness: 2, height: 0, color: Colors.black),
             LabelTextField(
               labelForm: 'Tempat Lahir',
               labelForm2: widget.inputDataModel.tempatLahir!,
@@ -61,8 +60,8 @@ class _DataDiriState extends State<DataDiri> {
               labelForm: 'Jenis Kelamin',
               labelForm2: widget.inputDataModel.jenisKelamin!,
             ),
-            LabelText(labelCategory: 'Alamat'),
-            Divider(thickness: 2, height: 0, color: Colors.black),
+            const LabelText(labelCategory: 'Alamat'),
+            const Divider(thickness: 2, height: 0, color: Colors.black),
             LabelTextField(
               labelForm: 'Alamat',
               labelForm2: widget.inputDataModel.alamat!,
@@ -107,8 +106,8 @@ class _DataDiriState extends State<DataDiri> {
               labelForm: 'Tahun',
               labelForm2: widget.inputDataModel.tahun!,
             ),
-            LabelText(labelCategory: 'Status'),
-            Divider(thickness: 2, height: 0, color: Colors.black),
+            const LabelText(labelCategory: 'Status'),
+            const Divider(thickness: 2, height: 0, color: Colors.black),
             LabelTextField(
               labelForm: 'Status Perkawinan',
               labelForm2: widget.inputDataModel.statusPerkawinan!,
@@ -143,20 +142,20 @@ class LabelText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 30),
           decoration: BoxDecoration(
-            border: Border.all(width: 2, color: Color(0xFF227471)),
+            border: Border.all(width: 2, color: const Color(0xFF227471)),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
             labelCategory,
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 20, color: Color(0xFF8BB4B4)),
+            style: const TextStyle(fontSize: 20, color: Color(0xFF8BB4B4)),
           ),
         ),
-        SizedBox(height: 10)
+        const SizedBox(height: 10)
       ],
     );
   }
@@ -176,16 +175,16 @@ class LabelTextField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Text(labelForm),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
         Text(
           labelForm2,
-          style: TextStyle(color: Color(0xFF227471), fontSize: 17),
+          style: const TextStyle(color: Color(0xFF227471), fontSize: 17),
         ),
-        SizedBox(height: 10),
-        Divider(thickness: 2, height: 0, color: Colors.black),
-        SizedBox(height: 10)
+        const SizedBox(height: 10),
+        const Divider(thickness: 2, height: 0, color: Colors.black),
+        const SizedBox(height: 10)
       ],
     );
   }
