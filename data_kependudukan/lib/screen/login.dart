@@ -118,7 +118,7 @@ class LabelTextField extends StatelessWidget {
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide(color: Color(0xFF227471)),
+              borderSide: const BorderSide(color: Color(0xFF227471)),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30),
