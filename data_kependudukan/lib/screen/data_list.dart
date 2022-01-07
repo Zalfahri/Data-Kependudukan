@@ -1,3 +1,4 @@
+import 'package:data_kependudukan/screen/input_new_data.dart';
 import 'package:flutter/material.dart';
 
 class DataList extends StatefulWidget {
@@ -38,8 +39,16 @@ class _DataListState extends State<DataList> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => InputNewData(),
+            ),
+          );
+        },
         backgroundColor: Color(0xFF227471),
+        child: Icon(Icons.add),
       ),
     );
   }

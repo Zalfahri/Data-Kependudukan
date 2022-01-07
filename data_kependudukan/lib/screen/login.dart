@@ -1,3 +1,4 @@
+import 'package:data_kependudukan/screen/data_list.dart';
 import 'package:data_kependudukan/screen/input_new_data.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class _LoginState extends State<Login> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => InputNewData(),
+              builder: (context) => DataList(),
             ),
           );
         } else {

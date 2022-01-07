@@ -22,7 +22,7 @@ class App extends StatelessWidget {
           color: Color(0xFF227471),
         ),
       ),
-      home: const DataList(),
+      home: const Login(),
     );
   }
 }
