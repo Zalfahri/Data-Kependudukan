@@ -1,3 +1,4 @@
+import 'package:data_kependudukan/screen/login.dart';
 import 'package:data_kependudukan/screen/navigation_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class App extends StatelessWidget {
           color: Color(0xFF227471),
         ),
       ),
-      home: const NavigationBar(),
+      home: const Login(),
     );
   }
 }
